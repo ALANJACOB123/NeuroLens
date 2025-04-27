@@ -1,0 +1,14 @@
+# User calibration protocol
+
+import time
+from eeg_acquisition.stream_data import acquire_eeg
+
+def calibrate_user():
+    print("Calibration: Resting baseline (30s)")
+    data1 = acquire_eeg(30)
+    print("Calibration: Focused task (30s)")
+    data2 = acquire_eeg(30)
+    print("Calibration: Relaxation state (30s)")
+    data3 = acquire_eeg(30)
+    print("Calibration complete.")
+    # Save or process calibration data as needed
