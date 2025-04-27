@@ -1,25 +1,22 @@
-# NeuroLens - Brainwave-Based Adaptive Learning System
+# NeuroLens
 
-NeuroLens is an adaptive e-learning system that personalizes content in real-time based on brainwave signals, using non-invasive EEG devices and machine learning algorithms.
+Brainwave-Based Adaptive Learning System using non-invasive EEG and Machine Learning.
 
-## Project Modules
-- EEG Data Acquisition
-- Preprocessing & Artifact Removal
-- Feature Extraction (PSD, Entropy)
-- Machine Learning-Based Classification
-- Real-Time LMS API Integration
-- VS Code Inline Learning Extension
+## Structure
+
+- eeg_acquisition: EEG data streaming
+- preprocessing: Signal cleaning
+- feature_extraction: PSD & entropy
+- models: Training & saving classifier
+- lms_integration: Flask API
+- calibration: User calibration routines
+- extension: VSCode inline extension
+- docs: Documentation & diagrams
 
 ## Setup
-1. Install dependencies from `requirements.txt`
-2. Connect EEG device via BrainFlow
-3. Run `stream_data.py`
-4. Preprocess, extract features, and train model
-5. Launch Flask server to connect LMS
-6. Optionally install VS Code extension
 
-## Contributors
-- Alan Jacob (Lead Developer)
-
-## License
-MIT License
+```bash
+pip install -r requirements.txt
+python models/train_classifier.py
+python lms_integration/api_server.py
+```

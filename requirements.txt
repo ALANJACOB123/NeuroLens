@@ -1,0 +1,7 @@
+brainflow
+mne
+numpy
+scipy
+scikit-learn
+joblib
+flask
